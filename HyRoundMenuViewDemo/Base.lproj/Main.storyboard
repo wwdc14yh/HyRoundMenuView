@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fOP-wD-4rM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash_BKG" translatesAutoresizingMaskIntoConstraints="NO" id="DQv-A4-L2i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-4I-BK6">
+                                <rect key="frame" x="16" y="587" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Oay-mb-0fY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Uac-AE-d06" kind="push" identifier="twoViewController" id="e2W-mN-coC"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctk-iK-kVx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="0.76811835106382975" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nVS-eE-EL6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LFp-1g-IKg"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fl3-4I-BK6" secondAttribute="bottom" constant="30" id="53L-1g-cg3"/>
+                            <constraint firstItem="DQv-A4-L2i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FDo-xe-UAi"/>
+                            <constraint firstItem="ctk-iK-kVx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MuK-oX-DZG"/>
+                            <constraint firstAttribute="trailing" secondItem="DQv-A4-L2i" secondAttribute="trailing" id="TAK-Mf-6zD"/>
+                            <constraint firstAttribute="trailing" secondItem="ctk-iK-kVx" secondAttribute="trailing" id="hZu-Fw-ltM"/>
+                            <constraint firstItem="DQv-A4-L2i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oFs-fi-LHQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DQv-A4-L2i" secondAttribute="bottom" id="q2H-jc-G3L"/>
+                            <constraint firstItem="Fl3-4I-BK6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qrT-ih-g9Z"/>
+                            <constraint firstItem="ctk-iK-kVx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sUX-g7-lpn"/>
+                            <constraint firstItem="Fl3-4I-BK6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u4C-zI-5za"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rlz-bi-JvX"/>
+                    <connections>
+                        <outlet property="pickerView" destination="ctk-iK-kVx" id="H4y-N4-DxC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="123.68815592203899"/>
+        </scene>
+        <!--Two View Controller-->
+        <scene sceneID="eeC-Ma-Ke3">
+            <objects>
+                <viewController storyboardIdentifier="twoViewController" id="Uac-AE-d06" customClass="twoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8jt-6c-dc8"/>
+                        <viewControllerLayoutGuide type="bottom" id="aF6-dc-2eW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4kE-iY-L1h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macOS-Sierra-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-DP-bY7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Vh-DP-bY7" firstAttribute="leading" secondItem="4kE-iY-L1h" secondAttribute="leading" id="3Wn-GY-VaN"/>
+                            <constraint firstItem="7Vh-DP-bY7" firstAttribute="top" secondItem="4kE-iY-L1h" secondAttribute="top" id="Ncy-xf-kR3"/>
+                            <constraint firstAttribute="trailing" secondItem="7Vh-DP-bY7" secondAttribute="trailing" id="S2I-7g-1ga"/>
+                            <constraint firstItem="aF6-dc-2eW" firstAttribute="top" secondItem="7Vh-DP-bY7" secondAttribute="bottom" id="pBm-wW-9Vh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="usT-oT-nL6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z54-ff-o6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797.5999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rRQ-97-K5X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fOP-wD-4rM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zbG-kt-omX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lt4-u2-xqr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zd-la-NFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Splash_BKG" width="576" height="960"/>
+        <image name="macOS-Sierra-iPhone" width="1242" height="2208"/>
+    </resources>
+</document>
