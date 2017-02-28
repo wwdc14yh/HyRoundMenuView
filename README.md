@@ -12,11 +12,64 @@
 
 ####示例:  </b>
 ![image](https://github.com/wwdc14/HyRoundMenuView/blob/master/HyRoundMenuViewDemo/Unknown.gif)
-
-### `HyRoundMenuView`公有方法以及属性说明:  
-- 允许拖拽按钮 默认为->`YES`\<br> 
+### 如何使用本项目？
+- step 1 -> 初始化
 ```obj
-@property (nonatomic, assign) BOOL allowDrag;`</b>
+_menuView = [HyRoundMenuView shareInstance];
+```
+- step 2 -> 填充数据源
+```obj
+    _data = @[
+              [HyRoundMenuModel title:@"FaceBook"
+                            iconImage:[UIImage imageNamed:@"ICON_SNS_facebook"]
+                       transitionType:HyRoundMenuModelTransitionTypeMenuEnlarge],
+              
+              [HyRoundMenuModel title:@"Link"
+                            iconImage:[UIImage imageNamed:@"ICON_SNS_Link"]
+                       transitionType:HyRoundMenuModelTransitionTypeNormal],
+             
+              [HyRoundMenuModel title:@"微信朋友圈"
+                            iconImage:[UIImage imageNamed:@"ICON_SNS_Moment"]
+                       transitionType:HyRoundMenuModelTransitionTypeMenuEnlarge],
+             
+              [HyRoundMenuModel title:@"QQ"
+                            iconImage:[UIImage imageNamed:@"ICON_SNS_QQ"]
+                       transitionType:HyRoundMenuModelTransitionTypeMenuEnlarge],
+             
+              [HyRoundMenuModel title:@"Twitter"
+                            iconImage:[UIImage imageNamed:@"ICON_SNS_twitter"]
+                       transitionType:HyRoundMenuModelTransitionTypeMenuEnlarge],
+             
+              [HyRoundMenuModel title:@"微信"
+                            iconImage:[UIImage imageNamed:@"ICON_SNS_Wechat"]
+                       transitionType:HyRoundMenuModelTransitionTypeMenuEnlarge],
+
+              [HyRoundMenuModel title:@"微博"
+                            iconImage:[UIImage imageNamed:@"ICON_SNS_Weibo"]
+                       transitionType:HyRoundMenuModelTransitionTypeMenuEnlarge]
+             ].mutableCopy;
+```
+- step 3 -> 自定义圆点图片等等...
+
+```obj
+HyRoundMenuModel *centerModel = [HyRoundMenuModel title:@"What you want to do?" iconImage:[UIImage imageNamed:@"SendRound"] transitionType:HyRoundMenuModelTransitionTypeNormal];
+```
+* 自定义圆点必须设置model的type属性为HyRoundMenuModelItmeTypeCenter，且只能有一个。
+```obj
+centerModel.type = HyRoundMenuModelItmeTypeCenter;
+[_data addObject:centerModel];
+```
+* 设置好以上属性后add到数据源 
+* 最后赋值到`_menuView.dataSources`里
+```obj
+_menuView.dataSources = _data;
+```
+* done (更多属性设置请参考demo)
+### `HyRoundMenuView`公有方法以及属性说明:  
+- 允许拖拽按钮 默认为->`YES`
+
+```obj
+@property (nonatomic, assign) BOOL allowDrag;
 ```
 
 - 允许按钮吸附在屏幕边缘 默认为->`YES`
