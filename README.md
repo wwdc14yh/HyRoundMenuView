@@ -74,7 +74,7 @@ _menuView.dataSources = _data;
 ```
 * done (更多属性设置请参考demo)
 
-## <a id="Public method and attribute description"></a>Public method and attribute description
+## <a id="Public method and attribute description"></a>HyRoundMenuView public method and attribute description
 ### HyRoundMenuView公有方法以及属性说明:  
 - 允许拖拽按钮 默认为->`YES`
 
@@ -136,7 +136,7 @@ _menuView.dataSources = _data;
 ```obj
 +(__nonnull instancetype) shareInstance
 ```
-## <a id="Public method and attribute description d"></a>Public method and attribute description d
+## <a id="Public method and attribute description d"></a>HyRoundMenuModel public method and attribute description
 ### HyRoundMenuModel公有方法以及属性说明:  
 
 - `model`标题
