@@ -65,7 +65,8 @@ centerModel.type = HyRoundMenuModelItmeTypeCenter;
 _menuView.dataSources = _data;
 ```
 * done (更多属性设置请参考demo)
-### `HyRoundMenuView`公有方法以及属性说明:  
+
+### HyRoundMenuView公有方法以及属性说明:  
 - 允许拖拽按钮 默认为->`YES`
 
 ```obj
@@ -126,4 +127,5 @@ _menuView.dataSources = _data;
 ```obj
 +(__nonnull instancetype) shareInstance
 ```
-...
+
+### HyRoundMenuModel公有方法以及属性说明:  
