@@ -13,7 +13,7 @@
 ####示例:  </b>
 ![image](https://github.com/wwdc14/HyRoundMenuView/blob/master/HyRoundMenuViewDemo/Unknown.gif)
 
-####HyRoundMenuView公有方法以及属性说明:  
+### `HyRoundMenuView`公有方法以及属性说明:  
 允许拖拽按钮 默认为->`YES`\<br> 
 ```obj
 @property (nonatomic, assign) BOOL allowDrag;`</b>
