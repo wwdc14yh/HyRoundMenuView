@@ -13,43 +13,62 @@
 ####示例:  </b>
 ![image](https://github.com/wwdc14/HyRoundMenuView/blob/master/HyRoundMenuViewDemo/Unknown.gif)
 
-####HyRoundMenuView公有方法以及属性说明:  </b>
+####HyRoundMenuView公有方法以及属性说明:  
 允许拖拽按钮 默认为->`YES`\<br> 
+```obj
+@property (nonatomic, assign) BOOL allowDrag;`</b>
+```
 
-`@property (nonatomic, assign) BOOL allowDrag;`</b>
-允许按钮吸附在屏幕边缘 默认为->`YES`</b>
+允许按钮吸附在屏幕边缘 默认为->`YES`
+```obj
+@property (nonatomic, assign) BOOL allowAdsorption
+```
 
-`@property (nonatomic, assign) BOOL allowAdsorption`;</b>
-允许拖拽按钮选择itme时产生3D效果</b>
+允许拖拽按钮选择itme时产生3D效果
+```obj
+@property (nonatomic, assign) BOOL allowEffect3D;
+```
 
-`@property (nonatomic, assign) BOOL allowEffect3D;`</b>
-`HyRoundMenuView`Delegate</b>
+`HyRoundMenuView`Delegate
+```obj
+@property (nonatomic, weak,  nullable) id<HyRoundMenuViewDelegate> delegate;
+```
+动画类型
+```obj
+@property (nonatomic, assign) HyRoundMenuViewAnimationType animationType;
+```
 
-`@property (nonatomic, weak,  nullable) id<HyRoundMenuViewDelegate> delegate;`</b>
-动画类型</b>
+** bigRadius/smallRadius 必须等于4
+** Bezier的大小必须和smallRadius*2的大小一样   建议用【PaintCode】来画想要的图形
+```obj
+@property (nonatomic, nullable, weak) UIBezierPath *customBigShapeBezierPath
+```
 
-`@property (nonatomic, assign) HyRoundMenuViewAnimationType animationType;`</b>
-** bigRadius/smallRadius 必须等于4</b>
+小圆按钮半径
+```obj
+@property (nonatomic, assign) CGFloat smallRadius
+```
+大圆按钮半径
+```obj
+@property (nonatomic, assign) CGFloat bigRadius;
+```
+形状颜色
+```obj
+@property (nonatomic, copy  , nonnull) UIColor *shapeColor;
+```
 
-** Bezier的大小必须和smallRadius*2的大小一样   建议用【PaintCode】来画想要的图形</b>
+模糊风格
+```obj
+@property (nonatomic, assign) UIBlurEffectStyle blurEffectStyle
+```
 
-`@property (nonatomic, nullable, weak) UIBezierPath *customBigShapeBezierPath`</b>
-小圆按钮半径</b>
+背景视图类型
+```obj
+@property (nonatomic, assign) HyRoundMenuViewBackgroundViewType backgroundViewType
+```
 
-`@property (nonatomic, assign) CGFloat smallRadius`</b>
-大圆按钮半径</b>
-`@property (nonatomic, assign) CGFloat bigRadius;`</b>
-形状颜色</b>
-
-`@property (nonatomic, copy  , nonnull) UIColor *shapeColor;`</b>
-模糊风格</b>
-
-`@property (nonatomic, assign) UIBlurEffectStyle blurEffectStyle`</b>
-背景视图类型</b>
-
-`@property (nonatomic, assign) HyRoundMenuViewBackgroundViewType backgroundViewType`</b>
-初始化方法</b>
-
-`+(__nonnull instancetype) shareInstance` </b>
-
-...</b>
+初始化方法
+```obj
++(__nonnull instancetype) shareInstance
+```
+...
