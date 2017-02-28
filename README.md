@@ -9,9 +9,17 @@
 [![Language](http://img.shields.io/badge/language-ObjC-brightgreen.svg?style=flat)](https://developer.apple.com/Objective-C)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
 > 关于**HyRoundMenuView**灵感来自于[JZMultiChoicesCircleButton](https://github.com/JustinFincher/JZMultiChoicesCircleButton)
+### 目录:
+* [示例](#Examples)
+* [如何使用本项目](#How to use this project)
+* [HyRoundMenuView公有方法以及属性说明](#Public method and attribute description)
+* [HyRoundMenuModel公有方法以及属性说明](#Public method and attribute description d)
 
-####示例:  </b>
+## <a id="Examples"></a>Examples
+### 示例: 
 ![image](https://github.com/wwdc14/HyRoundMenuView/blob/master/HyRoundMenuViewDemo/Unknown.gif)
+
+## <a id="How to use this project"></a>How to use this project
 ### 如何使用本项目？
 - step 1 -> 初始化
 ```obj
@@ -66,6 +74,7 @@ _menuView.dataSources = _data;
 ```
 * done (更多属性设置请参考demo)
 
+## <a id="Public method and attribute description"></a>Public method and attribute description
 ### HyRoundMenuView公有方法以及属性说明:  
 - 允许拖拽按钮 默认为->`YES`
 
@@ -127,5 +136,32 @@ _menuView.dataSources = _data;
 ```obj
 +(__nonnull instancetype) shareInstance
 ```
-
+## <a id="Public method and attribute description d"></a>Public method and attribute description d
 ### HyRoundMenuModel公有方法以及属性说明:  
+
+- `model`标题
+```obj
+@property (nonatomic, strong, nonnull) NSString *title
+```
+
+- 设置图标
+```obj
+@property (nonatomic, strong, nonnull) UIImage *iconImage
+```
+
+- 该属性默认为`HyRoundMenuModelItmeTypeDefault`
+```obj
+@property (nonatomic, assign,        ) HyRoundMenuModelItmeType type
+```
+
+- 转场方式类型
+```obj
+@property (nonatomic, assign,        ) HyRoundMenuModelTransitionType transitionType
+```
+
+- 类方法快速生成对象
+```obj
++ (__nonnull instancetype)title:(NSString * __nonnull)title
+                      iconImage:(UIImage * __nonnull)image
+                 transitionType:(HyRoundMenuModelTransitionType)transitionType
+```
