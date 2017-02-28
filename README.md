@@ -14,7 +14,7 @@
 ![image](https://github.com/wwdc14/HyRoundMenuView/blob/master/HyRoundMenuViewDemo/Unknown.gif)
 
 ####HyRoundMenuView公有方法以及属性说明:  </b>
-允许拖拽按钮 默认为->`YES`</b>
+允许拖拽按钮 默认为->`YES`\<br> 
 `@property (nonatomic, assign) BOOL allowDrag;`</b>
 允许按钮吸附在屏幕边缘 默认为->`YES`</b>
 `@property (nonatomic, assign) BOOL allowAdsorption`;</b>
